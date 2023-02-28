@@ -27,3 +27,32 @@ const parseDate = (datum) => {
 
 console.log(parseDate('03.04.1985'))
 */
+
+// CVIČENÍ 2
+// Bez použití knihovny dayjs napište funkci formatDate, která na vstupu obdrží objekt představující datum v následujícím formátu.
+// { day: 12, month: 3, year: 2015 }
+// Funkce vrátí řetězec představující datum ve formátu DD.MM.YYYY.
+
+const formatDate = (datum) => {
+    
+    /*
+    const datum = {
+        day: den,
+        month: mesic,
+        year: rok,
+    }
+    */
+
+    den = datum.day;
+    den = den.toString();
+    mesic = datum.month;
+    mesic = mesic.toString();
+    rok = datum.year;
+    rok = rok.toString();
+    
+    return den.padStart(2,"0") + '.' + mesic.padStart(2,"0") + '.' + rok
+
+}
+
+console.log(formatDate({ day: 3, month: 4, year: 2015 }))
+
